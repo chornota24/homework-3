@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -8,8 +12,33 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
+  margin: 0;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
 }
 
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
 .link,
 .list,
 .header-link,
@@ -17,6 +46,8 @@ body {
   list-style: none;
   text-decoration: none;
   color: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -33,6 +64,10 @@ body {
 }
 
 /* -------------------header--------------------- */
+
+.page-header {
+  
+}
 
 .logo {
   font-family: "Raleway";
@@ -52,12 +87,25 @@ body {
   color: var(--white-color);
 }
 .header-nav {
+  display: flex;
+  margin-left: 93px;
+  
   font-weight: 500;
   font-size: 14px;
   line-height: 1.33;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
+
+.header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-contact-us {
   font-weight: 500;
   font-size: 14px;
@@ -74,9 +122,28 @@ body {
 .header-contact-us .header-contact:focus {
   color: var(--accent-color);
 }
+.header-contact-us {
+  display: flex; 
+  margin-left: auto;
+}
+.header-contact-us .item + .item {
+  margin-left: 50px;
+}
+.header-contact {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+  }
 
 .current {
   color: var(--accent-color);
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-container {
+  outline: solid rosybrown;
 }
 
 /*-------------main-----------------------------*/
@@ -84,6 +151,7 @@ body {
 .main-section {
   color: var(--white-color);
   background-color: #2f303a;
+  text-align: center;
 }
 .main-section-title {
   font-weight: 900;
@@ -93,6 +161,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+  margin-bottom: 30px;
 }
 .main-button {
   font-family: inherit;
@@ -106,6 +175,17 @@ body {
   color: var(--white-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  min-width: 200px;
+  text-align: center;
+  display: inline-block;
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 10px 32px 10px 32px;
+}
+.main-section {
+}
+.main-container {
+  outline: 2px solid red;
 }
 
 /* -------------Our advantages---------------- */
@@ -117,17 +197,30 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
+  margin-bottom: 10px;
 }
 .advantages-text {
+  width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+.advantages-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  outline: 2px solid cadetblue;
+}
+.advantages-list {
+  display: flex;
+}
+.advantages-list .item + .item {
+  margin-left: 30px;
+}
 
 /* ---------------Our Activities--------------- */
 
-.activity-header {
+.activity-title {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -135,19 +228,35 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+.activity-container {
+  padding-bottom: 94px;
+  outline: 2px solid green;
+}
+.activity-list {
+  display: flex;
+}
+.activity-list .item + .item {
+  margin-left: 30px;
 }
 
 /* ---------------Our Team--------------------- */
-.team-header {
+.team-title {
+  margin-bottom: 50px;
+  
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--title-text-color);
+  color: var(--title-text-color); 
 }
 .team-name {
+  padding-top:30px ;
+  padding-bottom: 10px;
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -157,26 +266,35 @@ body {
 }
 
 .team-position {
+  padding-bottom: 30px;
+  
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  
+}
+.team-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  outline: 2px solid burlywood;
+}
+.team-list {
+  display: flex;
+}
+.team-list .item + .item {
+  margin-left: 30px;
 }
 
 /* ---------------Footer--------------------- */
-.footer-logo {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--accent-color);
-}
+
 .footer-address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  margin-bottom: 9px;
 }
 .footer-email,
 .footer-phone {
@@ -184,6 +302,12 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-list {
+  margin-top: 20px;
+}
+.footer-item {
+  margin-bottom: 9px;
 }
 .footer {
   background: #2f303a;
@@ -199,6 +323,11 @@ body {
 .footer-phone:focus,
 .footer-phone:hover {
   color: var(--accent-color);
+}
+.foot-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  outline: 2px solid grey;
 }
 
 /* --------------------------portfolio----------------------------- */
@@ -216,9 +345,42 @@ body {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
   cursor: pointer;
+  background-color: #f5f4fa;
+  padding: 6px 20px;
+  border-radius: 4px;
+  border-color: transparent;
+}
+.main-list {
+  display: flex;
+  margin-bottom: 34px;
+  justify-content: center;
+}
+.main-list .main-item + .main-item {
+  margin-left: 8px;
 }
 
 /* ------projects------- */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; !!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  margin-left: auto;
+  margin-right: auto;
+}
+.project-item {
+  width: 370px;
+}
+.project-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+.project-item:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
 .project-title {
   font-weight: 700;
   font-size: 18px;
@@ -231,4 +393,9 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+.main-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  outline: 2px solid green;
 }
