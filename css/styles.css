@@ -83,13 +83,14 @@ img {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-right: 93px;
 }
 .logo-web {
   color: var(--accent-color);
 }
 .logo-studio {
   color: var(--title-text-color);
-  margin-right: 93px;
+ 
 }
 .logo-studio-white {
   color: var(--white-color);
@@ -221,7 +222,7 @@ img {
 .advantages-list {
   display: flex;
 }
-.advantages-list .item + .item {
+.advantages-item + .advantages-item {
   margin-left: 30px;
 }
 
